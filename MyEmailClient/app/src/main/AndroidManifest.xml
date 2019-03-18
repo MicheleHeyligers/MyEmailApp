@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.s11.myemailclient">
+
+    <!-- im Manifest müssen eingetragen werden:
+         - alle Activities
+         - Starter-Icon
+         - Permissions
+         - supportsRtl = supports right to left (für arabischen Schriftraum,
+           Unterstützung für Schrift von rechts nach links), default: false
+         - Services (Hintergrunddinge, die ablaufen, z.B. Überprüfungen mit Datenbanken)
+         - Broadcast-Receiver (Daten auffangen, z.B. push-notifications; schauen,
+           ob sie für das Gerät sind u. was dann gemacht werden soll)
+      -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <!-- Punkt vor Activity-Name ist Platzhalter für Package-Name,
+             s.oben: "com.example.s11.myemailclient"
+             - LAUNCHER-category darf nur einmal vergeben sein,
+               für Start-Activity, d.h. die App startet mit dieser
+               Activity u. dem damit verknüpften Layout -->
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
