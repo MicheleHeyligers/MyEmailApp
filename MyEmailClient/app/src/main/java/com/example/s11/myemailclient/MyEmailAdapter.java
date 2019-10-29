@@ -15,6 +15,9 @@ public class MyEmailAdapter extends ArrayAdapter {
     private Context context;
     private ArrayList<Email> mailsList;
 
+    // Konstruktor für MyEmailAdapter (mit 4 Übergabeparametern)
+    // Ressource wird als Int übergeben --> im Ressourcen-Ordner werden Layouts automat. mit einer
+    // int-ID hinterlegt u. wenn man Name auswählt, wird automat. die Int erkannt
     public MyEmailAdapter(@NonNull Context context, int resource, int textViewResourceId, @NonNull ArrayList<Email> mailsList) {
         super(context, resource, textViewResourceId, mailsList);
         this.context = context;
@@ -23,6 +26,7 @@ public class MyEmailAdapter extends ArrayAdapter {
 
     // Methode getView ruft Layout auf, was im Adapter-Konstruktor unter "ressource" hinterlegt ist
     // mit dieser Methode werden z.B. alle Emails aufgerufen u. entsprechend in Layouts dargestellt
+    // Methode wird überschrieben, kommt aus ArrayAdapter-Klasse, die oben mit extends implementiert wird
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Email myemail = mailsList.get(position);
@@ -48,6 +52,7 @@ public class MyEmailAdapter extends ArrayAdapter {
         msgTV.setText(myemail.getBody());
         sentDateTV.setText(myemail.getSentDate());
 
+        // convertView ist der View für einen Listeneintrag (in der Email-Liste)
         return convertView;
     }
 }

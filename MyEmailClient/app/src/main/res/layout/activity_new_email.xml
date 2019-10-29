@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color1">
+        android:background="@color/color1"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
@@ -25,6 +28,7 @@
             android:textSize="20dp"
             android:layout_weight="1" />
         <EditText
+            android:id="@+id/sendAdress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="8"
@@ -45,6 +49,7 @@
             android:textSize="20dp"
             android:layout_weight="1" />
         <EditText
+            android:id="@+id/destAdress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="8"
@@ -55,17 +60,18 @@
         android:layout_height="wrap_content">
 
         <EditText
-
+            android:id="@+id/subject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/betreff"
             android:textColor="@color/eingabefelder" />
     </LinearLayout>
-    <TextView
-
+    <EditText
+        android:id="@+id/emailtext"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/email_schreiben"
+        android:gravity="top"
         android:textColor="@color/eingabefelder"
         android:textSize="18dp"/>
 </LinearLayout>

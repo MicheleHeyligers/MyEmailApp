@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyEmailClient</string>
+    <string name="login_title">Anmeldung</string>
+    <string name="hello_again_world">Hello again World!</string>
+    <string name="game_starten">Game starten</string>
+    <string name="highscores">Highscores</string>
+    <string name="credits">credits</string>
+    <string name="settings">settings</string>
+    <string name="myemailclient_login">MyEmailClient Login</string>
+    <string name="abbrechen">abbrechen</string>
+    <string name="anmelden">anmelden</string>
+    <string name="benutzername">Benutzername:</string>
+    <string name="pa_wort">Paßwort:</string>
+    <string name="email_anbieter">Email-Anbieter</string>
+    <string name="emailanbieter">Emailanbieter:</string>
+    <string name="emailadresse">EmailAdresse</string>
+    <string name="passwort">Passwort</string>
+    <string name="von_0">von 0</string>
+    <string name="betreff_eingang_0">Betreff Eingang 0</string>
+    <string name="nachricht_nr_0">Nachricht Nr. 0</string>
+    <string name="datumUhrzeit">11:00:00 21.08.2018</string>
+    <string name="eingang">Eingang</string>
+    <string name="betreff_eingang_2">Betreff Eingang 2</string>
+    <string name="von_2">von 2</string>
+    <string name="nachricht_nr_2">Nachricht Nr.2</string>
+    <string name="von">Von</string>
+    <string name="assd">Email Adresse</string>
+    <string name="an">An</string>
+    <string name="betreff">Betreff</string>
+    <string name="email_schreiben">Email schreiben</string>
+    <string name="no_emails_available">No Emails available</string>
+    <string name="empty_mail_list">empty_mail_list</string>
+    <string name="empty_inputs_toast">Bitte Felder ausfüllen.</string>
+    <string name="inputs_wrong">Benutzer oder Passwort falsch</string>
+    <string name="button">Button</string>
+    <string name="action_settings">action_settings</string>
+    <string name="neue_email">neue Email</string>
+    <string name="toast_send">gesendet</string>
+    <string name="open_drawer">öffne Drawer</string>
+    <string name="close_drawer">schließe Drawer</string>
+    <string name="keineMails">keine Emails vorhanden</string>
+    <string name="detail_email">Detailansicht</string>
+    <string name="deleteDialogText">Wollen Sie diese Email wirklich löschen?</string>
+    <string name="title_dialog_delete">Email löschen</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--hier werden einzelne Icons für das Toolbar-Menü gespeichert; Titel
+        zwingend notwendig, auch wenn man ihn nicht sieht;
+        Id vergeben, Icon aus drawables-Ordner einfügen und Sichtbarkeit
+        festlegen (always, never, ifRoom....)-->
+    <!--Id's müssen in EINEM XML-Dokument unique sein, aber sie brauchen nicht
+        verschieden sein zu den ID's in den anderen drawables-XML-Dokumenten im
+        gleichen Projekt -> Id ist Dokument-abhängig u. muss in einem EINZIGEN Dokument unique sein-->
+    <item
+        android:id="@+id/action_refresh_emaillist"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        android:title="@string/action_settings"
+        app:showAsAction="always"/>
+</menu>

@@ -5,12 +5,15 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_detailview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color1"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
     </android.support.v7.widget.Toolbar>
     <TextView
+        android:id="@+id/detail_tv_subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/betreff_eingang_2"
@@ -18,12 +21,14 @@
         android:layout_margin="10dp"
         android:textStyle="bold"/>
     <TextView
+        android:id="@+id/detail_tv_from"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/von_2"
         android:textSize="20sp"
         android:layout_margin="10dp"/>
     <TextView
+        android:id="@+id/detail_tv_body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -13,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
-
+    // extends = erben von best. Klassen; implements = Methoden einbinden - Interfaces (Schnittstellen, die eingebunden werden)
     private EditText inputUsername;
     private EditText inputPassword;
     private Button cancelBtn;
@@ -30,10 +32,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         // get-sharedpref Object, um Boolean abzuspeichern
         // es wird gespeichert, ob User schon angemeldet ist in der App oder
-        // ob er die App zum 1. Mal startet
+        // ob er die App zum 1. Mal startet; Initialisierung shared-preferences-Objekt
         this.sp = getPreferences(Context.MODE_PRIVATE);
         this.editor = sp.edit();
-        // get value for firstRun-key from file, gibt es hier keinen Wert --> true
+        // get value for firstRun-key from file, gibt es hier keinen Wert --> true (Default-Wert)
         this.firstRunnable = sp.getBoolean("firstRun", true);
 
         if(firstRunnable) {
@@ -51,6 +53,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             this.cancelBtn = findViewById(R.id.login_btn_escape);
             /*1. Weg, Anweisung für Button zu codieren - bei zu vielen Buttons zu unübersichtlich
+            // hier wird der OnClickListener nur für den speziellen Button gesetzt
             this.cancelBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -59,6 +62,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             });*/
             /* 2. Weg, Anweisung für Button zu codieren mit this (global oben in class-
             Deklaration eingefügt mit "implements View.OnClickListener"* - ist BESSER!!*/
+            /* besser, weil damit in der onClick-Methode (weiter unten) verschieden Buttons
+            angesprochen werden können*/
             this.cancelBtn.setOnClickListener(this);
 
             this.loginBtn = findViewById(R.id.login_btn_signIn);
@@ -80,6 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             // nicht nötig, wenn Daten per sharedPref. übergeben werden
             User user = new User(userName, userPassword);
             intentMainActivity.putExtra("currentUser", user);
+            // mit 'putExtra' kann man Daten mit einem Intent mitschicken; mit 'getExtra' Daten wieder rausholen
 
             // Übergabe der einzelnen Attribute nicht nötig, weil sie mit dem User-Objekt zusammen übergeben werden
             //intentMainActivity.putExtra("username", userName);
@@ -87,7 +93,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             intentMainActivity.putExtra("providerpos", currentProviderPos);
             // Mainactivity wird gestartet
             startActivity(intentMainActivity);
-            // login_activity wird geschlossen
+            // login_activity wird geschlossen, kann man dann auch nicht wieder hin zurück
             finish();
         }
     }
@@ -106,7 +112,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if(userName.equals("lotta@gmx.de") && userPassword.equals("12345")){
                     // inputs korrekt
                     // Mainactivity aufrufen mit explizitem Intent, von "this"(= activity_login)
-                    // zu activity_mainview
+                    // zu MainActivity.class (also zu neuem View activity_mainview rüberleiten)
                     Intent intentMainActivity = new Intent(this, MainActivity.class);
 
                     // SharedPref., Strings holen und mit commit()-Methode abspeichern

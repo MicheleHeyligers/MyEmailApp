@@ -19,9 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".DetailEmailActivity"></activity>
+        <activity android:name=".NewEmailActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <!-- Punkt vor Activity-Name ist Platzhalter für Package-Name,
              s.oben: "com.example.s11.myemailclient"
              - LAUNCHER-category darf nur einmal vergeben sein,

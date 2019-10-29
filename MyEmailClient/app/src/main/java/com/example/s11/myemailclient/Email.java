@@ -1,7 +1,9 @@
 package com.example.s11.myemailclient;
 
+import java.io.Serializable;
+
 // Klasse, um eine Email zu verfassen und abzuschicken
-public class Email {
+public class Email implements Serializable {
     private String from;
     private String[] to;
     private String[] cc;
